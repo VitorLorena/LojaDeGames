@@ -3,7 +3,7 @@ package org.generation.LojaDeGames.Controller;
 import java.util.List;
 
 import org.generation.LojaDeGames.model.Categoria;
-import org.generation.LojaDeGames.repository.ProdutoRepository;
+import org.generation.LojaDeGames.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -56,9 +56,9 @@ public class CategoriaController {
 	@DeleteMapping("/{id}")
     public ResponseEntity<?> deletePostagem(@PathVariable long id) {
 
-        return categoriaRepository.findById(id)
+        return repository.findById(id)
                 .map(resposta -> {
-                    postagemRepository.deleteById(id);
+                    repository.deleteById(id);
                     return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
                 })
                 .orElse(ResponseEntity.notFound().build());
