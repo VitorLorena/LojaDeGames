@@ -31,6 +31,15 @@
 				"url": null
 			},
 			"response": []
+		},
+		{
+			"name": "Deletando arquivos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
 		}
 	]
 }
