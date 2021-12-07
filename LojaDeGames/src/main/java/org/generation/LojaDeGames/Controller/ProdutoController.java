@@ -2,8 +2,8 @@ package org.generation.LojaDeGames.Controller;
 
 import java.util.List;
 
-import org.generation.blogPessoal.model.Postagem;
-import org.generation.blogPessoal.repository.PostagemRepository;
+import org.generation.LojaDeGames.model.Produto;
+import org.generation.LojaDeGames.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,13 +20,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/produtos")
 @CrossOrigin("*")
-public class ProdutosController {
+public class ProdutoController {
 
 	@Autowired
-	private ProdutosRepository repository;
+	private ProdutoRepository repository;
 	
 	@GetMapping
-	public ResponseEntity<List<Produtos>> GetAll(){
+	public ResponseEntity<List<Produto>> GetAll(){
 		return ResponseEntity.ok(repository.findAll());
 	}
 	

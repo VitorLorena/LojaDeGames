@@ -2,8 +2,8 @@ package org.generation.LojaDeGames.Controller;
 
 import java.util.List;
 
-import org.generation.blogPessoal.model.Tema;
-import org.generation.blogPessoal.repository.PostagemRepository;
+import org.generation.LojaDeGames.model.Categoria;
+import org.generation.LojaDeGames.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
